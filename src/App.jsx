@@ -10,22 +10,26 @@ function App() {
 
   const [card, setCard] = useState([])
 
+
   const handelProdunt = (product) => {
     const newProduct = [...card, product]
     setCard(newProduct)
   }
 
+  // console.log(card)
+  
+
   return (
     <div>
       <Header/>
 
-      <div className="grid grid-cols-4 gap-4 w-[1240px]">
+      <div className="grid grid-cols-4 gap-4 w-[1240px] scroll-smooth">
       <div className="col-span-3">
       <Main count={handelProdunt}/>
       </div>
 
     <div className="col-end-auto">
-    <SideBar select={card.length}/>
+    <SideBar product={card} lent={card.length}/>
     </div>
       </div>
     </div>
