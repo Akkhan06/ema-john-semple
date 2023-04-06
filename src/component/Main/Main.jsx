@@ -13,7 +13,7 @@ const Main = (props) => {
     
 
     return (
-        <div className='grid grid-cols-3 gap-4 ml-2 mt-24'>
+        <div className='grid grid-cols-3 gap-4 ml-2'>
             {
                 products.map(product => <Cards product={product} handler={props.count} key={product.id}/>)
             }
