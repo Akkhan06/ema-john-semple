@@ -18,7 +18,7 @@ const Review = () => {
 
   // ============ONE DATA REMOVE FROM LOCALSTORAGE==============
   const removeOneData = (id) => {
-    const removeCard = card.filter((sin) => sin.id !== id);
+    const removeCard = cards.filter((sin) => sin.id !== id);
     setCards(removeCard);
     removeCardId(id);
   };
