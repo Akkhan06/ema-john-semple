@@ -17,14 +17,14 @@ const Cards = (props) => {
     
   return (
     <div>
-      <div className="card w-auto rounded-b-lg h-[500px] bg-base-100 shadow-xl relative">
+      <div className="w-auto rounded-b-lg h-[500px] bg-base-100 shadow-xl relative">
         <figure>
           <img
             src={props.product.img}
             alt="Shoes"
           />
         </figure>
-        <div className="card-body p-3 ">
+        <div className=" p-3 ">
           <div className="p-5">
           <h1 className="card-title text-2xl font-bold">{name}</h1>
           <h2 className="card-title font-bold mt-3">Price: ${price}</h2>
@@ -32,7 +32,7 @@ const Cards = (props) => {
           <p className="mt-4">Manufacturer : {seller}</p>
           </div>
           <div className="card-actions">
-          <button onClick={()=>props.handler(props.product)} className="btn btn-primary hover:bg-[#ff9900] bg-[#FFE0B3] w-full left-0 rounded-b-lg absolute bottom-0 h-10">Buy Now <FontAwesomeIcon icon={faShoppingCart} /> </button>
+          <button onClick={()=>props.handler(props.product)} className=" hover:bg-[#ff9900] bg-[#FFE0B3] w-full left-0 rounded-b-lg absolute bottom-0 h-10">Buy Now <FontAwesomeIcon icon={faShoppingCart} /> </button>
           </div>
         </div>
       </div>
