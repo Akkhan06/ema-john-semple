@@ -34,16 +34,16 @@ const router = createBrowserRouter([
      },
      {
       path: 'review',
-      element: <Review/>,
+      element: <PrivateRouter><Review/></PrivateRouter>,
       loader: saveReview
      },
      {
       path: 'inventory',
-      element: <Inventory/>
+      element: <PrivateRouter><Inventory/></PrivateRouter>
      },
      {
       path: '/checkout',
-      element: <Checkout/>
+      element: <PrivateRouter><Checkout/></PrivateRouter>
      },
      {
       path: '/signup',

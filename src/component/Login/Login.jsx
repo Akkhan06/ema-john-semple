@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthUser } from "../../AuthContext/AuthContext";
 
@@ -7,6 +7,7 @@ const Login = () => {
   const {loginUser} = useContext(AuthUser)
   const navigate = useNavigate()
   const location = useLocation();
+  const [errors, setError] = useState('')
 
   const from = location.state?.from?.pathname || '/';
   console.log(location)
@@ -26,6 +27,8 @@ const Login = () => {
         })
         .catch(error => {
           console.log(error)
+          const mass = error.message
+          setError('password or email is wrong')
         })
     }
   return (
@@ -61,8 +64,8 @@ const Login = () => {
                   className="input input-bordered"
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
+                  <a href="#" className="label-text-alt text-red-700 link link-hover">
+                    {errors}
                   </a>
                 </label>
               </div>

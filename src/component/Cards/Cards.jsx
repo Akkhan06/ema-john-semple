@@ -17,15 +17,15 @@ const Cards = (props) => {
     
   return (
     <div>
-      <div className="w-auto rounded-b-lg h-[500px] bg-base-100 shadow-xl relative">
+      <div className="w-auto rounded-b-lg md:h-[500px] h-[600px] bg-base-100 shadow-xl relative">
         <figure>
-          <img
+          <img className="w-full h-96"
             src={props.product.img}
             alt="Shoes"
           />
         </figure>
         <div className=" p-3 ">
-          <div className="p-5">
+          <div className="md:p-5">
           <h1 className="card-title text-2xl font-bold">{name}</h1>
           <h2 className="card-title font-bold mt-3">Price: ${price}</h2>
           
