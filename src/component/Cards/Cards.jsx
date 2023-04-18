@@ -19,7 +19,7 @@ const Cards = (props) => {
     <div>
       <div className="w-auto rounded-b-lg md:h-[500px] h-[600px] bg-base-100 shadow-xl relative">
         <figure>
-          <img className="w-full h-96"
+          <img className="w-full h-96 md:w-auto md:h-auto"
             src={props.product.img}
             alt="Shoes"
           />
